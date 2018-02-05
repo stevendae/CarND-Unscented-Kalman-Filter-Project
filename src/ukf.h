@@ -67,6 +67,12 @@ public:
   ///* Sigma point spreading parameter
   double lambda_;
 
+  int n_sig_;
+
+  double NIS_radar_;
+
+  double NIS_laser_;
+
 
   /**
    * Constructor
@@ -77,6 +83,8 @@ public:
    * Destructor
    */
   virtual ~UKF();
+
+  void NormalAngle(double *ang);
 
   /**
    * ProcessMeasurement
