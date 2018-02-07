@@ -441,9 +441,7 @@ void UKF::ProcessMeasurement(MeasurementPackage measurement_pack) {
 
       // first measurement
       cout << "EKF: " << endl;
-
-      MatrixXd P(n_x_,n_x_);
-      P << 1,0,0,0,0,
+      P_ << 1,0,0,0,0,
           0,1,0,0,0,
           0,0,1,0,0,
           0,0,0,1,0,
